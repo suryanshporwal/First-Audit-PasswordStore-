@@ -11,12 +11,12 @@ We can show one such method of reading any data off chain below.
 
 The below test case shows how anyone can read data from the private variable in the code.
 
-1. Create a locally running anvil node
+1. Create a locally running anvil node:
 ```bash
 make anvil
 ```
 
-2. Deploy contract to chain
+2. Deploy contract to chain:
 ```
 make deploy
 ```
