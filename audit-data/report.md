@@ -11,7 +11,7 @@ header-includes:
     \centering
     \begin{figure}[h]
         \centering
-        \includegraphics[width=0.5\textwidth]{logo.pdf} 
+        \includegraphics[width=0.5\textwidth]{logo.pdf}
     \end{figure}
     \vspace*{2cm}
     {\Huge\bfseries Protocol Audit Report\par}
@@ -25,16 +25,15 @@ header-includes:
 
 \maketitle
 
-
 <!-- Your report starts here -->
-
 
 ## Prepared By
 
 **Prepared by:** [Suryansh Porwal](https://www.linkedin.com/in/suryansh-porwal/)
 
 **Lead Auditors:**
-- xxxxxxx
+
+- Suryansh
 
 # Table of Contents
 
@@ -79,11 +78,23 @@ We use the [CodeHawks severity matrix](https://docs.codehawks.com/hawks-auditors
 
 # Audit Details
 
-## Scope
+**The findings described in this document correspond the following commit hash:**
+```
+(commit hash for repo)
+```
 
+## Scope
+```
+./src/PasswordStore.sol
+```
 ## Roles
+- Owner: The user who can set the password and read the password.
+- Outsiders: No one else should be able to set or read the password.
 
 # Executive Summary
+*Add some notes about how the audit went, types of things you found, etc.*
+
+*We spend X hours with Z auditors using Y tools. etc*
 
 ## Issues Found
 
@@ -113,13 +124,13 @@ The below test case shows how anyone can read data from the private variable in 
 make anvil
 ```
 
-2. Deploy contract to chain:
+1. Deploy contract to chain:
 
 ```bash
 make deploy
 ```
 
-3. Run the storage tool.
+1. Run the storage tool.
 
 **Recommended Mitigation**
 
