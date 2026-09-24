@@ -61,7 +61,7 @@ header-includes:
 
 # Protocol Summary
 
-Protocol does X, Y, Z
+A smart contract application for storing a password. Users should be able to store a password and then retrieve it later. Others should not be able to access the password.
 
 # Disclaimer
 
@@ -83,13 +83,14 @@ We use the [CodeHawks severity matrix](https://docs.codehawks.com/hawks-auditors
 **The findings described in this document correspond the following commit hash:**
 
 ```
-(commit hash for repo)
+7d55682ddc4301a7b13ae9413095feffd9924566
 ```
 
 ## Scope
 
 ```
-./src/PasswordStore.sol
+./src/
+#--PasswordStore.sol
 ```
 
 ## Roles
@@ -107,10 +108,10 @@ We use the [CodeHawks severity matrix](https://docs.codehawks.com/hawks-auditors
 
 | Severity      | Number of issues found |
 | ------------- | ---------------------- |
-| High          | 2                      |
-| Medium        | 0                      |
-| Low           | 0                      |
-| Informational | 1                      |
+| High          |           2            |
+| Medium        |           0            |
+| Low           |           0            |
+| Informational |           1            |
 
 # Findings
 
