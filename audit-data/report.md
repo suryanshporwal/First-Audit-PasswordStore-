@@ -37,8 +37,7 @@ header-includes:
 
 # Table of Contents
 
-- [Protocol Audit Report](#protocol-audit-report)
-- [Prepared By](#prepared-by)
+- [Table of Contents](#table-of-contents)
 - [Protocol Summary](#protocol-summary)
 - [Disclaimer](#disclaimer)
 - [Risk Classification](#risk-classification)
@@ -49,13 +48,16 @@ header-includes:
   - [Issues Found](#issues-found)
 - [Findings](#findings)
   - [High](#high)
-    - [H-1 — Storing the password on-chain makes it visible to anyone, and no longer private](#h-1-storing-the-password-on-chain-makes-it-visible-to-anyone-and-no-longer-private)
-    - [H-2 — `PasswordStore::setPassword()` has no access controls](#h-2-passwordstoresetpassword-has-no-access-controls-meaning-a-non-owner-could-change-the-password)
+    - [\[H-1\] Storing the password on-chain makes it visible to anyone, and no longer private](#h-1-storing-the-password-on-chain-makes-it-visible-to-anyone-and-no-longer-private)
+      - [Likelyhood and Impact](#likelyhood-and-impact)
+    - [\[H-2\] `PasswordStore::setPassword()` has no access controls, meaning a non-owner could change the password](#h-2-passwordstoresetpassword-has-no-access-controls-meaning-a-non-owner-could-change-the-password)
+      - [Likelyhood and Impact](#likelyhood-and-impact-1)
   - [Medium](#medium)
   - [Low](#low)
   - [Informational](#informational)
-    - [I-1 — Wrong NatSpec](#i-1-wrong-natspec)
-  - [Gas](#gas)
+    - [\[I-1\] Wrong NatSpec: The `PasswordStore::getPassword` NatSpec indicates a parameter that doesn't exist, causing the NatSpec to be incorrect](#i-1-wrong-natspec-the-passwordstoregetpassword-natspec-indicates-a-parameter-that-doesnt-exist-causing-the-natspec-to-be-incorrect)
+      - [Likelyhood and Impact](#likelyhood-and-impact-2)
+- [Gas](#gas)
 
 # Protocol Summary
 
@@ -67,36 +69,48 @@ The HydrousAudits team makes all effort to find as many vulnerabilities in the c
 
 # Risk Classification
 
-|            |        | Impact |        |     |
-|------------|--------|--------|--------|-----|
-|            |        | High   | Medium | Low |
-|            | High   | H      | H/M    | M   |
+|                |        | Impact |        |     |
+| -------------- | ------ | ------ | ------ | --- |
+|                |        | High   | Medium | Low |
+|                | High   | H      | H/M    | M   |
 | **Likelihood** | Medium | H/M    | M      | M/L |
-|            | Low    | M      | M/L    | L   |
+|                | Low    | M      | M/L    | L   |
 
 We use the [CodeHawks severity matrix](https://docs.codehawks.com/hawks-auditors/how-to-evaluate-a-finding-severity) to determine severity. See the documentation for more details.
 
 # Audit Details
 
 **The findings described in this document correspond the following commit hash:**
+
 ```
 (commit hash for repo)
 ```
 
 ## Scope
+
 ```
 ./src/PasswordStore.sol
 ```
+
 ## Roles
+
 - Owner: The user who can set the password and read the password.
 - Outsiders: No one else should be able to set or read the password.
 
 # Executive Summary
+
 *Add some notes about how the audit went, types of things you found, etc.*
 
 *We spend X hours with Z auditors using Y tools. etc*
 
 ## Issues Found
+
+| Severity      | Number of issues found |
+| ------------- | ---------------------- |
+| High          | 2                      |
+| Medium        | 0                      |
+| Low           | 0                      |
+| Informational | 1                      |
 
 # Findings
 
